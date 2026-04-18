@@ -1,0 +1,45 @@
+{
+  "enable": {
+    "type": "bool",
+    "description": "Enable voice repeater",
+    "default": true
+  },
+  "stt_provider_id": {
+    "type": "string",
+    "description": "STT provider ID (leave empty to use current)",
+    "_special": "select_provider_stt",
+    "default": ""
+  },
+  "tts_provider_id": {
+    "type": "string",
+    "description": "TTS provider ID (leave empty to use current)",
+    "_special": "select_provider_tts",
+    "default": ""
+  },
+  "text_template": {
+    "type": "text",
+    "description": "TTS text template, use {text}",
+    "default": "{text}"
+  },
+  "clone_response_format": {
+    "type": "string",
+    "description": "Audio response format",
+    "default": "wav",
+    "options": ["wav", "mp3", "flac", "opus", "aac", "pcm"]
+  },
+  "clone_language": {
+    "type": "string",
+    "description": "TTS language",
+    "default": "Auto"
+  },
+  "clone_instructions": {
+    "type": "text",
+    "description": "Optional TTS instructions",
+    "default": ""
+  },
+  "fallback_to_plain_tts": {
+    "type": "bool",
+    "description": "Fallback to non-clone TTS if clone fails",
+    "default": true
+  }
+}
